@@ -22,7 +22,7 @@ describe('LinkedList', () => {
             expect(list._head).to.be.an.instanceof(Node)
         });
 
-        it('should add new data to the end of list', () => {
+        it.only('should add new data to the end of list', () => {
             const list = new LinkedList();
 
             list.append(123);
@@ -110,7 +110,7 @@ describe('LinkedList', () => {
     });
 
     describe('#clear', () => {
-        it('should clear the list', () => {
+        it.only('should clear the list', () => {
             const list = new LinkedList();
 
             list.append(32);

@@ -106,7 +106,13 @@ class LinkedList {
         }
     }
 
-    clear() {}
+    clear() {
+        this._head = null;
+        this._tail = null;
+        this.length = 0;
+
+        return this;
+    }
 
     deleteAt(index) {
         if(this.length === 0) {
