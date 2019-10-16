@@ -62,39 +62,40 @@ class LinkedList {
     }
 
     insertAt(index, data) {
-        // if(index < 0 || this.length < index) {
-        //     return false;
-        // }
+        if(index < 0 || this.length < index) {
+            return false;
+        }
 
-        // let newNode = new Node();
-        // newNode.data = data;
+        let newNode = new Node();
+        newNode.data = data;
 
-        // if(index === 0) {
-        //     newNode.next = this._head;
-        //     this._head.prev = newNode;
-        //     this._head = newNode;
-        // } else if (index === this.length - 1) {
-        //     newNode.prev = this._tail;
-        //     this._tail.next = newNode;
-        //     this._tail = newNode;
-        // } else {
-        //     let current = this._head;
-        //     let position = 0;
+        if(index === 0) {
+            newNode.next = this._head;
+            this._head.prev = newNode;
+            this._head = newNode;
+        } else if (index === this.length) {
+            this._tail.next = newNode;
+            newNode.prev = this._tail;
+            this._tail = newNode;
+        } else {
+            let current = this._head;
+            let prev = null;
+            let position = 0;
 
-        //     while(position < index) {
-        //         prev = current;
-        //         current = current.next;
-        //         position++;
-        //     }
+            while(position < index) {
+                prev = current;
+                current = current.next;
+                position++;
+            }
 
-        //     prev.next = newNode;
-        //     newNode.prev = prev;
-        //     newNode.next = current;
-        //     current.prev = newNode;
-        // }
+            prev.next = newNode;
+            newNode.prev = prev;
+            newNode.next = current;
+            current.prev = newNode;
+        }
 
-        // this.length++;
-        // return this;
+        this.length++;
+        return this;
     }
 
     isEmpty() {
