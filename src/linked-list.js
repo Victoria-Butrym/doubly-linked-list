@@ -41,9 +41,61 @@ class LinkedList {
         }
     }
 
-    at(index) {}
+    at(index) {
+        if(this.length === 0) {
+            return null;
+        }
 
-    insertAt(index, data) {}
+        if(index < 0 || this.length <= index) {
+            return false;
+        }
+
+        let current = this._head;;
+        let position = 0;
+
+        while(position < index) {
+            current = current.next;
+            position++;
+        }
+
+        return current.data;
+    }
+
+    insertAt(index, data) {
+        // if(index < 0 || this.length < index) {
+        //     return false;
+        // }
+
+        // let newNode = new Node();
+        // newNode.data = data;
+
+        // if(index === 0) {
+        //     newNode.next = this._head;
+        //     this._head.prev = newNode;
+        //     this._head = newNode;
+        // } else if (index === this.length - 1) {
+        //     newNode.prev = this._tail;
+        //     this._tail.next = newNode;
+        //     this._tail = newNode;
+        // } else {
+        //     let current = this._head;
+        //     let position = 0;
+
+        //     while(position < index) {
+        //         prev = current;
+        //         current = current.next;
+        //         position++;
+        //     }
+
+        //     prev.next = newNode;
+        //     newNode.prev = prev;
+        //     newNode.next = current;
+        //     current.prev = newNode;
+        // }
+
+        // this.length++;
+        // return this;
+    }
 
     isEmpty() {
         if(this.length === 0) {

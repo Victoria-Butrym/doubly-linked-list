@@ -55,7 +55,7 @@ describe('LinkedList', () => {
         });
     });
     describe('#at', () => {
-        it('should return Node.data by index', () => {
+        it.only('should return Node.data by index', () => {
             const list = new LinkedList();
 
             list.append(1);
