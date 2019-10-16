@@ -108,7 +108,42 @@ class LinkedList {
 
     clear() {}
 
-    deleteAt(index) {}
+    deleteAt(index) {
+        if(this.length === 0) {
+            return false;
+        }
+
+        if(index < 0 || this.length <= index) {
+            return null;
+        }
+
+        let current;
+
+        if(index === 0) {
+            current = this._head;
+            this._head = this._head.next;
+            this._head.prev = null;
+        } else if(index === this.length - 1) {
+            current = this._tail;
+            this._tail = this._tail.prev;
+            this._tail.next = null;
+        } else{
+            current = this._head;
+            let prev = null;
+            let position = 0;
+
+            while(position < index) {
+                prev = current;
+                current = current.next;
+                position++;
+            }
+
+            prev.next = current.next;
+            current.next.prev = prev;
+        }
+
+        return this;
+    }
 
     reverse() {}
 

@@ -82,7 +82,7 @@ describe('LinkedList', () => {
             expect(list.at(position)).to.equal(data);
         });
 
-        it ('shouldn\'t replace existing values', () => {
+        it.only ('shouldn\'t replace existing values', () => {
             const list = new LinkedList();
             const position = 1;
             const data = 42;
@@ -124,7 +124,7 @@ describe('LinkedList', () => {
         });
     });
     describe('#deleteAt', () => {
-        it('should delete element by index', () => {
+        it.only('should delete element by index', () => {
             const list = new LinkedList();
 
             list.append(1);
