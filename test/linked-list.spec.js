@@ -5,7 +5,7 @@ describe('LinkedList', () => {
     describe('#constructor', () => {
         const list = new LinkedList();
 
-        it('assign 0 to this.length', () => {
+        it.only('assign 0 to this.length', () => {
             expect(list.length).to.equal(0);
         })
     });
