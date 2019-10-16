@@ -46,7 +46,7 @@ describe('LinkedList', () => {
     });
     describe('#tail', () => {
         const list = new LinkedList();
-        it('should return data from the this.tail', () => {
+        it.only('should return data from the this.tail', () => {
             const data = 31;
 
             list.append(data);

@@ -33,7 +33,13 @@ class LinkedList {
         }
     }
 
-    tail() {}
+    tail() {
+        if(this.length != 0) {
+            return this._tail.data;
+        } else {
+            return null;
+        }
+    }
 
     at(index) {}
 
