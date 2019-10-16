@@ -151,7 +151,21 @@ class LinkedList {
         return this;
     }
 
-    reverse() {}
+    reverse() {
+        let current = this._head;
+        this._head = this._tail;
+        this._tail = current;
+
+        for(let i = 0; i < this.length; i++) {
+            let buffer = current.next;
+            current.next = current.prev;
+            current.prev = buffer;
+
+            current = current.prev;
+        }
+
+        return this;
+    }
 
     indexOf(data) {
         if(this.length === 0) {
