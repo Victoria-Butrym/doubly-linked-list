@@ -161,7 +161,7 @@ describe('LinkedList', () => {
         });
     });
     describe('#indexOf', () => {
-        it('should return index of element if data is found', () => {
+        it.only('should return index of element if data is found', () => {
             const list = new LinkedList();
 
             list.append(3);
@@ -171,7 +171,7 @@ describe('LinkedList', () => {
             expect(list.indexOf(7)).to.equal(1);
         });
 
-        it('should return -1 if data not found', () => {
+        it.only('should return -1 if data not found', () => {
             const list = new LinkedList();
 
             list.append(7);

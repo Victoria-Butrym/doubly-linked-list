@@ -111,7 +111,23 @@ class LinkedList {
 
     reverse() {}
 
-    indexOf(data) {}
+    indexOf(data) {
+        if(this.length === 0) {
+            return false;
+        }
+
+        let current = this._head;
+        
+        for(let i = 0; i < this.length; i++) {
+            if(current.data === data) {
+                return i;
+            } else {
+                current = current.next;
+            }
+        }
+
+        return -1;
+    }
 }
 
 module.exports = LinkedList;
