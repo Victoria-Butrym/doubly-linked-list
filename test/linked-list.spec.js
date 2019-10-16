@@ -11,7 +11,7 @@ describe('LinkedList', () => {
     });
 
     describe('#append', () => {
-        it('should assign any nodes to this._head and this._tail if list is empty', () => {
+        it.only('should assign any nodes to this._head and this._tail if list is empty', () => {
             const data = 42;
 
             const list = new LinkedList();
