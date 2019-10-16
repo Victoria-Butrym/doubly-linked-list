@@ -36,7 +36,7 @@ describe('LinkedList', () => {
     });
     describe('#head', () => {
         const list = new LinkedList();
-        it('should return data from the this.head', () => {
+        it.only('should return data from the this.head', () => {
             const data = 13;
 
             list.append(data);

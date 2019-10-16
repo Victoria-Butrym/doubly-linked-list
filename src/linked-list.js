@@ -26,7 +26,11 @@ class LinkedList {
     }
 
     head() {
-        return this.head.data;
+        if(this.length != 0) {
+            return this._head.data;
+        } else {
+            return null;
+        }
     }
 
     tail() {}
