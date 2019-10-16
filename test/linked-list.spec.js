@@ -98,7 +98,7 @@ describe('LinkedList', () => {
         });
     });
     describe('#isEmpty', () => {
-        it('should return true if list is empty', () => {
+        it.only('should return true if list is empty', () => {
             const list = new LinkedList();
 
             expect(list.isEmpty()).to.be.true;

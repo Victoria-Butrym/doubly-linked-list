@@ -7,7 +7,20 @@ class LinkedList {
         this.length = 0;
     }
 
-    append(data) {}
+    append(data) {
+        const newNode = new Node(data);
+
+        if(this.length === 0) {
+            this.head = newNode;
+            this.tail = newNode;
+        } else {
+            this.tail.next = newNode;
+            newNode.prev = this.tail;
+            this.tail = newNode;
+        }
+
+        this.length++;
+    }
 
     head() {}
 
@@ -17,7 +30,13 @@ class LinkedList {
 
     insertAt(index, data) {}
 
-    isEmpty() {}
+    isEmpty() {
+        if(this.length === 0) {
+            return true;
+        } else {
+            return false;
+        }
+    }
 
     clear() {}
 
